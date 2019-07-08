@@ -13,6 +13,8 @@ matrix:
       env: JEKYLL_VERSION=">= 4.0.0.pre.alpha1"
     - rvm: 2.6
       env: JEKYLL_MASTER=true
+    - rvm: 2.6
+      env: JEKYLL_MASTER=true MMISTAKES_EDGE=true
 
 before_install:
   - gem update --system --no-document
