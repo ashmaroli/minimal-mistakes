@@ -7,5 +7,6 @@ branches:
   only:
     # Change this to gh-pages if you're deploying using the gh-pages branch
     - master
+    - memory-profile
 rvm:
  - 2.4
