@@ -2,10 +2,14 @@ language: ruby
 cache: bundler
 gemfile: docs/Gemfile
 script:
-  - bundle exec jekyll algolia --source docs --destination docs/_site --config docs/_config.yml
-branches:
-  only:
-    # Change this to gh-pages if you're deploying using the gh-pages branch
-    - master
+  - bundle exec ruby .memprof
 rvm:
- - 2.4
+ - 2.6
+matrix:
+  include:
+    - rvm: 2.6
+      env: JEKYLL_VERSION="~> 3.8"
+    - rvm: 2.6
+      env: JEKYLL_VERSION=">= 4.0.0.pre.alpha1"
+    - rvm: 2.6
+      env: JEKYLL_MASTER=true
