@@ -12,6 +12,7 @@ else
 end
 
 gem "memory_profiler"
+gem "jekyll-data", github: "ashmaroli/jekyll-data", ref: "refs/pull/30/head"
 gem "minimal-mistakes-jekyll", github: "ashmaroli/minimal-mistakes", branch: "memory-profile"
 
 # If you have any plugins, put them here!
