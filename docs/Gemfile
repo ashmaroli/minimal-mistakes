@@ -12,7 +12,7 @@ else
 end
 
 gem "memory_profiler"
-gem "minimal-mistakes", github: "mmistakes/minimal-mistakes"
+gem "minimal-mistakes-jekyll", github: "mmistakes/minimal-mistakes"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
