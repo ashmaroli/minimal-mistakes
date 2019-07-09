@@ -14,11 +14,11 @@ Dir.chdir(File.expand_path("docs", __dir__)) do
       "destination" => File.expand_path("./_site"),
     )
   end
+
+  puts "\nGenerating results..\n\n"
+
+  puts %x(free -h)
+  puts
+
+  report.pretty_print(scale_bytes: true, normalize_paths: true, color_output: false)
 end
-
-puts "\nGenerating results..\n\n"
-
-puts %x(free -h)
-puts
-
-report.pretty_print(scale_bytes: true, normalize_paths: true, color_output: false)
