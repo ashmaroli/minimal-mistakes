@@ -7,11 +7,13 @@ puts
 require 'jekyll'
 require 'memory_profiler'
 
-report = MemoryProfiler.report do
-  Jekyll::Commands::Build.process(
-    "source"      => File.expand_path("docs", __dir__),
-    "destination" => File.expand_path("docs/_site", __dir__),
-  )
+Dir.chdir(File.expand_path("docs", __dir__)) do
+  report = MemoryProfiler.report do
+    Jekyll::Commands::Build.process(
+      "source"      => File.expand_path("."),
+      "destination" => File.expand_path("./_site"),
+    )
+  end
 end
 
 puts "\nGenerating results..\n\n"
