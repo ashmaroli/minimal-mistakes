@@ -12,7 +12,7 @@ Dir.chdir(File.expand_path("docs", __dir__)) do
     Jekyll::Commands::Build.process(
       "source"      => File.expand_path("."),
       "destination" => File.expand_path("./_site"),
-      "verbose      => true
+      "verbose"     => true
     )
   end
 
